@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Portfolio from "./Components/Portfolio";
+import Profile from "./Components/Profile";
+import Home from "./Components/Home";
+import {
+  ThemeProvider,
+  unstable_createMuiStrictModeTheme as createMuiTheme,
+} from "@material-ui/core/styles";
+
+const theme = createMuiTheme();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <div className="App row" id="app">
+          <Switch>
+            <Route path="/portfolio" component={Portfolio}></Route>
+            <Route exact path="/" component={Home}></Route>
+            <Route path="/profile" component={Profile}></Route>
+          </Switch>
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 
