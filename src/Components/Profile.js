@@ -8,6 +8,8 @@ import {
 } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core";
 import TemporaryDrawer from "./Drawer";
+import WorkIcon from "@material-ui/icons/Work";
+import HomeIcon from "@material-ui/icons/Home";
 
 const useStyles = makeStyles({
   root: {
@@ -21,7 +23,12 @@ export default function Profile() {
 
   return (
     <>
-      <TemporaryDrawer />
+      <TemporaryDrawer
+        name_path={[
+          { name: "Home", path: "/", icon: <HomeIcon /> },
+          { name: "Portfolio", path: "/portfolio", icon: <WorkIcon /> },
+        ]}
+      />
       <div id="profile" className="col-sm-12">
         <h1>Profile</h1>
       </div>

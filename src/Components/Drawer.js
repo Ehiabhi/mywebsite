@@ -6,8 +6,6 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import WorkIcon from "@material-ui/icons/Work";
-import HomeIcon from "@material-ui/icons/Home";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link } from "react-router-dom";
@@ -31,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function TemporaryDrawer({locations}) {
+export default function TemporaryDrawer({ name_path }) {
   const classes = useStyles();
   const [state, setState] = React.useState({
     left: false,
@@ -58,14 +56,11 @@ export default function TemporaryDrawer({locations}) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {[
-          { name: "Home", location: "/", icon: <HomeIcon /> },
-          { name: "Portfolio", location: "/portfolio", icon: <WorkIcon /> },
-        ].map((item, index) => (
+        {name_path.map((item, index) => (
           <ListItem button key={item.name}>
             <ListItemIcon>{item.icon}</ListItemIcon>
             <ListItemText>
-              <Link to={item.location}>{item.name}</Link>
+              <Link to={item.path}>{item.name}</Link>
             </ListItemText>
           </ListItem>
         ))}
