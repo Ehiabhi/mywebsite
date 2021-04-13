@@ -15,6 +15,9 @@ const useStyles = makeStyles({
   root: {
     color: "white",
     fontSize: "2rem",
+    "&:hover": {
+      color: "#ff9100",
+    },
   },
 });
 
@@ -33,7 +36,7 @@ export default function Profile() {
         <h1>Profile</h1>
       </div>
       <div id="skills_list" className="col-sm-12">
-        <h2 className="heading" style={{ color: "green" }}>
+        <h2 className="heading" style={{ color: "#ff9100" }}>
           Skills
         </h2>
         <div className="row">

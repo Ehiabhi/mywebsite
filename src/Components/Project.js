@@ -25,7 +25,10 @@ const useStyles = makeStyles((theme) => ({
   },
   media: {
     height: 0,
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
+    backgroundBlendMode: "multiply",
     paddingTop: "56.25%", // 16:9
+    border: "1px solid #fff",
   },
   expand: {
     transform: "rotate(0deg)",
@@ -46,6 +49,38 @@ const useStyles = makeStyles((theme) => ({
   },
   cardHeader: {
     backgroundColor: "transparent",
+    height: 64,
+  },
+  github: {
+    color: "#ff9100",
+    "&:hover": {
+      color: "#fff",
+      backgroundColor: "#ff9100",
+      borderRadius: "50%",
+    },
+  },
+  collapseText: {
+    color: "#ff9100",
+    backgroundColor: "#000",
+  },
+  collapse: {
+    color: "#ff9100",
+    "&:hover": {
+      color: "#fff",
+      backgroundColor: "#ff9100",
+      borderRadius: "50%",
+    },
+  },
+  link: {
+    color: "#000",
+    "&:hover": {
+      color: "#fff",
+      backgroundColor: "#000",
+      borderRadius: "50%",
+    },
+  },
+  tech: {
+    color: "#000",
   },
 }));
 
@@ -67,19 +102,19 @@ export default function ProjectCard({ info }) {
           title={info.title}
         />
         <CardContent className={classes.cardContent}>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" className={classes.tech} component="p">
             {info.tech}
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
           <IconButton aria-label="add to favorites">
             <a target="_blank" rel="noopener noreferrer" href={info.gitrepo}>
-              <GitHubIcon />
+              <GitHubIcon className={classes.github} />
             </a>
           </IconButton>
           <IconButton aria-label="share">
             <a target="_blank" rel="noopener noreferrer" href={info.link}>
-              <LinkIcon />
+              <LinkIcon className={classes.link} />
             </a>
           </IconButton>
           <IconButton
@@ -90,10 +125,15 @@ export default function ProjectCard({ info }) {
             aria-expanded={expanded}
             aria-label="show more"
           >
-            <ExpandMoreIcon />
+            <ExpandMoreIcon className={classes.collapse} />
           </IconButton>
         </CardActions>
-        <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <Collapse
+          className={classes.collapseText}
+          in={expanded}
+          timeout="auto"
+          unmountOnExit
+        >
           <CardContent>
             <Typography paragraph>{info.note}</Typography>
           </CardContent>

@@ -20,12 +20,22 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     position: "fixed",
     zIndex: "1000",
-    top: "5%",
+    top: "1%",
     left: "5%",
     marginRight: theme.spacing(2),
   },
   burger: {
+    color: "#ff0080",
+  },
+  navIcon: {
     color: "#ff9100",
+  },
+  menuNav: {
+    color: "#000",
+    "&:hover": {
+      textDecoration: "none",
+      color: "#888",
+    },
   },
 }));
 
@@ -56,11 +66,13 @@ export default function TemporaryDrawer({ name_path }) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {name_path.map((item, index) => (
+        {name_path.map((item) => (
           <ListItem button key={item.name}>
-            <ListItemIcon>{item.icon}</ListItemIcon>
+            <ListItemIcon className={classes.navIcon}>{item.icon}</ListItemIcon>
             <ListItemText>
-              <Link to={item.path}>{item.name}</Link>
+              <Link className={classes.menuNav} to={item.path}>
+                {item.name}
+              </Link>
             </ListItemText>
           </ListItem>
         ))}

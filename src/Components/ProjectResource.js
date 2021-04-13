@@ -1,6 +1,6 @@
 export const ProjectList = [
   {
-    title: "GloNOCApp",
+    title: "Optical Fiber Manager",
     link: "https://glonocapp.herokuapp.com/",
     img: "images/glonoc.png",
     tech: "React, Node, Express, MongoDB",

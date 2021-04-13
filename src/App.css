@@ -1,14 +1,17 @@
 html, body {
   background: url("/images/d69da00d7b5ca364f56eb68e0d190e70.jpg") no-repeat center center fixed;
   background-size: cover;
-  background-blend-mode: multiply;
   /* background-color: rgba(0, 0, 0, 0.8); */
+  background-blend-mode: multiply;
   height: 100%;
-  padding-top: 20px;
 }
 
 .App {
   text-align: center;
+}
+
+#photo {
+  margin-top: 5rem;
 }
 
 #passport {
@@ -25,7 +28,6 @@ html, body {
 }
 
 #intro {
-  /* background-color: rgba(0, 0, 0, 1); */
   color: #ff0080;
   font-family: monospace;
   font-size: 18px;
@@ -65,12 +67,24 @@ html, body {
   text-decoration: none;
 }
 
-.portfolio {
-  margin-bottom: 30px;
+.portfolio, #skills_list {
+  margin-top: 80px;
+}
+
+.portfolio:last-child {
+  margin-bottom: 80px;
+}
+
+#profile {
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.85);
+  left: 0%;
+  transform: -50%;
 }
 
 #profile, #skills_list ul, #skills_list b {
-  color: rgb(189, 13, 243);
+  color: #ff0080;
   padding: 0;
 }
 
@@ -93,7 +107,7 @@ html, body {
 }
 
 .card span {
-  color: rgb(189, 13, 243);
+  color: #ff0080;
   font-family: monospace;
   font-size: 1.4rem;
   position: absolute;
@@ -126,17 +140,12 @@ html, body {
 }
 
 @media only screen and (max-width: 768px) {
-
 .card {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
 }
 }
-
-/* @media only screen and (min-width: 650px) and (max-width: 900px) {
-
-} */
 
 @keyframes borderColors {
   0% {
