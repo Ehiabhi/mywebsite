@@ -1,10 +1,33 @@
-html, body {
-  background: url("/images/d69da00d7b5ca364f56eb68e0d190e70.jpg") no-repeat center center fixed;
+html,
+body {
+  background: url("/images/d69da00d7b5ca364f56eb68e0d190e70.jpg") no-repeat
+    center center fixed;
   background-size: cover;
   background-blend-mode: multiply;
   /* background-color: rgba(0, 0, 0, 0.8); */
   height: 100%;
   padding-top: 20px;
+}
+
+* {
+  font-family: "Roboto mono", monospace;
+}
+
+#root {
+  margin-top: 3em;  
+}
+
+.explore {
+  margin-top: 2em;
+}
+
+
+.span {
+  font-weight: 300;
+  font-size: .7em;
+  font-style: italic;
+  color: inherit;
+  animation: colors 2s ease-in 0.1s infinite;
 }
 
 .App {
@@ -38,11 +61,10 @@ html, body {
   padding: 15px 5px;
   margin: 0 5px;
   border-radius: 5px;
-  background-color: #07bbd3;
+  background-color: #ff9100;
   font-weight: 500;
   text-decoration: none;
   color: #000000;
-  border: 1px solid #07bbd3;
 }
 
 .navLink a {
@@ -69,12 +91,16 @@ html, body {
   margin-bottom: 30px;
 }
 
-#profile, #skills_list ul, #skills_list b {
+#profile,
+#skills_list ul,
+#skills_list b {
   color: rgb(189, 13, 243);
   padding: 0;
 }
 
-#profile, #skills_list, #social_div {
+#profile,
+#skills_list,
+#social_div {
   margin-bottom: 2rem;
 }
 
@@ -104,8 +130,8 @@ html, body {
 }
 
 #socials {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 #socials_wrap {
@@ -117,21 +143,18 @@ html, body {
 }
 
 @media only screen and (min-width: 768px) {
-  
-
-#app {
-  width: 80%;
-  margin: 0 auto;
-}
+  #app {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-
-.card {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .card {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* @media only screen and (min-width: 650px) and (max-width: 900px) {
@@ -140,30 +163,33 @@ html, body {
 
 @keyframes borderColors {
   0% {
-    border-top-color: #07bbd3;
-    border-right-color: #ff9100;
-    border-bottom-color: #ff0080;
-    border-left-color: #bbff00;
+    border-color: #ff0080;
   }
   25% {
-    border-top-color: #bbff00;
-    border-right-color: #07bbd3;
-    border-bottom-color: #ff9100;
-    border-left-color: #ff0080;
+    border-color: #ff9100;
   }
   50% {
-    border-top-color: rgb(255, 0, 128);
-    border-right-color: rgb(187, 255, 0);
-    border-bottom-color: rgb(7, 187, 211);
-    border-left-color:  rgb(255, 145, 0);
+    border-color: #ff0080;
   }
   75% {
-    border-top-color: rgb(255, 145, 0);
-    border-right-color: rgb(255, 0, 128);
-    border-bottom-color: rgb(187, 255, 0);
-    border-left-color: rgb(7, 187, 211);
+    border-color: #ff9100;
   }
   100% {
     border-color: rgb(255, 255, 255);
+  }
+}
+
+@keyframes colors {
+  0% {
+    color: #ff0080;
+  }
+  25% {
+    color: #ff9100;
+  }
+  50% {
+    color: #ff0080;
+  }
+  75% {
+    color: #ff9100;
   }
 }

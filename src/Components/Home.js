@@ -15,10 +15,12 @@ export default class Home extends React.Component {
           />
         </div>
         <div className="col-sm-12">
-          <h1 id="name">Hi, I'm Enimakpokpo Ehiabhi Ehis</h1>
-          <h3 id="intro">A Professional JavaScript Fullstack Developer.</h3>
+          <h1 id="name">
+            Hi, I'm Enimakpokpo Ehiabhi Ehis;{" "}
+            <span className="span">I'm a Fullstack Web Developer.</span>
+          </h1>
         </div>
-        <div className="col-sm-12">
+        <div className="col-sm-12 explore">
           <Button quote="Profile" location="/profile" />
           <Button quote="Portfolio" location="/portfolio" />
         </div>
