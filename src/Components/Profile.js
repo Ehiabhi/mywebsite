@@ -111,7 +111,7 @@ export default function Profile() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://twitter.com/Ehiabhiehis"
+              href="https://twitter.com/fullstacKmaniac?s=09"
             >
               <Twitter className={classes.root} />
             </a>
