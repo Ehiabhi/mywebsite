@@ -1,0 +1,194 @@
+html,
+body {
+  background: url("/images/d69da00d7b5ca364f56eb68e0d190e70.jpg") no-repeat
+    center center fixed;
+  background-size: cover;
+  background-blend-mode: multiply;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  height: 100%;
+  padding-top: 20px;
+}
+
+* {
+  font-family: "Roboto mono", monospace;
+}
+
+#root {
+  margin-top: 3em;
+}
+
+.explore {
+  margin-top: 2em;
+}
+
+.span {
+  font-weight: 300;
+  font-size: 0.7em;
+  font-style: italic;
+  color: inherit;
+  animation: colors 2s ease-in 0.1s infinite;
+}
+
+.App {
+  text-align: center;
+}
+
+#passport {
+  border-radius: 50%;
+  border: 5px solid;
+  animation: borderColors 3s infinite linear;
+}
+
+#name {
+  color: #ff9100;
+  letter-spacing: 2px;
+  text-shadow: 9px -2px 2px rgb(22, 18, 18);
+  font-size: 40px;
+}
+
+#intro {
+  /* background-color: rgba(0, 0, 0, 1); */
+  color: #ff0080;
+  font-family: monospace;
+  font-size: 18px;
+}
+
+.projectNav {
+  display: inline-block;
+  width: 100px;
+  cursor: pointer;
+  padding: 15px 5px;
+  margin: 0 5px;
+  border-radius: 5px;
+  background-color: #ff9100;
+  font-weight: 500;
+  text-decoration: none;
+  color: #000000;
+}
+
+.navLink a {
+  color: #fff;
+  text-decoration: none;
+  background-color: lightseagreen;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.navLink ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.projectNav:hover {
+  background-color: #000000;
+  color: #07bbd3;
+  border-color: #07bbd3;
+  text-decoration: none;
+}
+
+.portfolio {
+  margin-bottom: 30px;
+}
+
+#profile,
+#skills_list ul,
+#skills_list b {
+  color: rgb(189, 13, 243);
+  padding: 0;
+}
+
+#profile,
+#skills_list,
+#social_div {
+  margin-bottom: 2rem;
+}
+
+#skills_list ul li {
+  list-style-type: none;
+}
+
+.pack {
+  margin-bottom: 20px;
+}
+
+.row .card {
+  height: 100px;
+  position: relative;
+  background: #ffffff;
+}
+
+.card span {
+  color: rgb(189, 13, 243);
+  font-family: monospace;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 38%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#socials {
+  display: flex;
+  justify-content: space-between;
+}
+
+#socials_wrap {
+  margin: 0 auto;
+}
+
+#socials_wrap a {
+  margin: 0 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  #app {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* @media only screen and (min-width: 650px) and (max-width: 900px) {
+
+} */
+
+@keyframes borderColors {
+  0% {
+    border-color: #ff0080;
+  }
+  25% {
+    border-color: #ff9100;
+  }
+  50% {
+    border-color: #ff0080;
+  }
+  75% {
+    border-color: #ff9100;
+  }
+  100% {
+    border-color: rgb(255, 255, 255);
+  }
+}
+
+@keyframes colors {
+  0% {
+    color: #ff0080;
+  }
+  25% {
+    color: #ff9100;
+  }
+  50% {
+    color: #ff0080;
+  }
+  75% {
+    color: #ff9100;
+  }
+}
