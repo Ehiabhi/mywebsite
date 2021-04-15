@@ -1,7 +1,13 @@
+* {
+  font-family: "Exo 2", "monospace";
+  font-size: 1rem;
+  line-height: 1.334;
+}
+
 html, body {
-  background: url("/images/d69da00d7b5ca364f56eb68e0d190e70.jpg") no-repeat center center fixed;
+  background: rgba(0, 0, 0, 0.8) url("/images/original.jpg") no-repeat center center fixed;
   background-size: cover;
-  /* background-color: rgba(0, 0, 0, 0.8); */
+  background-color: rgba(0, 0, 0, 0.7) !important;
   background-blend-mode: multiply;
   height: 100%;
 }
@@ -131,20 +137,18 @@ html, body {
 }
 
 @media only screen and (min-width: 768px) {
-  
-
-#app {
-  width: 80%;
-  margin: 0 auto;
-}
+  #app {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-.card {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .card {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @keyframes borderColors {

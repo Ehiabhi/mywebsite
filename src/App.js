@@ -9,7 +9,11 @@ import {
   unstable_createMuiStrictModeTheme as createMuiTheme,
 } from "@material-ui/core/styles";
 
-const theme = createMuiTheme();
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: `"Exo 2", "monospace"`,
+  },
+});
 
 function App() {
   return (

@@ -20,6 +20,15 @@ export const ProjectList = [
       "Goldbank Mobile is a app for digitizing banking transaction. To access all banking services, users...",
   },
   {
+    title: "EPDI",
+    link: "https://www.epdi.org/",
+    img: "images/EPDI.png",
+    tech: "HTML, SASS, JavaScript, BootStrap4",
+    tags: "Volunteering, NGO",
+    gitrepo: "#",
+    note: "A website for EPDI, an NGO in Lagos. Read more on the website.",
+  },
+  {
     title: "CovidTinz",
     link: "https://covidtinz.web.app/",
     img: "images/CovidTinzApp.png",
@@ -38,5 +47,15 @@ export const ProjectList = [
     gitrepo: "https://github.com/Ehiabhi/VersalWeatherApp",
     note:
       "This is a weather web application that aid users to get weather information for a specified location.",
+  },
+  {
+    title: "Izy's Web Page",
+    link: "http://ehisenimakpokpo.web.app/",
+    img: "images/mywebpage.png",
+    tech: "React, Firebase",
+    tags: "Self Development",
+    gitrepo: "https://github.com/Ehiabhi/mywebsite",
+    note:
+      "A react app for showcasing my skills and enabling potential clients and collaborators contact me.",
   },
 ];

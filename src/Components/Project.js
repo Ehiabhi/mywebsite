@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: 250,
     margin: "0 auto",
+    // fontFamily: ["].join(","),
   },
   cardContent: {
     color: "red",
@@ -50,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
   cardHeader: {
     backgroundColor: "transparent",
     height: 64,
+    overflow: "hidden",
   },
   github: {
     color: "#ff9100",
