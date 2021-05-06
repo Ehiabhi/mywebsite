@@ -35,8 +35,12 @@ html, body {
 
 #intro {
   color: #ff0080;
-  font-family: monospace;
   font-size: 18px;
+}
+
+#about p {
+  color: #ff9100;
+  font-size: 1.5rem;
 }
 
 .projectNav {
@@ -73,8 +77,12 @@ html, body {
   text-decoration: none;
 }
 
-.portfolio, #skills_list {
+.portfolio, #skills_list, #about {
   margin-top: 80px;
+}
+
+#about {
+  text-align: left;
 }
 
 .portfolio:last-child {
@@ -114,13 +122,28 @@ html, body {
 
 .card span {
   color: #ff0080;
-  font-family: monospace;
   font-size: 1.4rem;
   position: absolute;
   top: 38%;
   transform: translateY(-50%);
   left: 50%;
   transform: translateX(-50%);
+}
+
+.form-horizontal {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.form-horizontal input, .form-horizontal textarea, .form-horizontal input:focus, .form-horizontal textarea:focus {
+  background-color: transparent;
+  color: #ff9100;
+  letter-spacing: 1.5px;
+}
+
+.form-horizontal input:focus, .form-horizontal textarea:focus {
+  border-color: none;
 }
 
 #socials {
@@ -136,18 +159,74 @@ html, body {
   margin: 0 1rem;
 }
 
+@media only screen and (min-width: 992px) {
+  .form-group>div:first-child {
+    padding: 0 10px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   #app {
     width: 80%;
     margin: 0 auto;
   }
+
+  .form-group>div {
+    padding: 0;
+  }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 576px) and (max-width: 768px) {
   .card {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .form-group>div {
+    padding: 0;
+  }
+
+  .form-horizontal input, .form-horizontal textarea, #submitted {
+    width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #about {
+    font-size: 1rem;
+    margin-bottom: 80px;
+  }
+
+  #photo {
+  margin-top: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .card {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form-group>div {
+    padding: 0;
+  }
+
+  .form-horizontal input, .form-horizontal textarea, #submitted {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #about {
+    font-size: 1rem;
+    margin-bottom: 80px;
+  }
+
+  #photo {
+  margin-top: 2.5rem;
   }
 }
 

@@ -13,12 +13,10 @@ import { red } from "@material-ui/core/colors";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import LinkIcon from "@material-ui/icons/Link";
 import GitHubIcon from "@material-ui/icons/GitHub";
-
 const useStyles = makeStyles((theme) => ({
   root: {
     width: 250,
     margin: "0 auto",
-    // fontFamily: ["].join(","),
   },
   cardContent: {
     color: "red",

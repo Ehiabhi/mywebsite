@@ -1,3 +1,5 @@
+import { LinkedIn, GitHub, PhoneAndroid, Twitter } from "@material-ui/icons";
+
 export const ProjectList = [
   {
     title: "Optical Fiber Manager",
@@ -57,5 +59,35 @@ export const ProjectList = [
     gitrepo: "https://github.com/Ehiabhi/mywebsite",
     note:
       "A react app for showcasing my skills and enabling potential clients and collaborators contact me.",
+  },
+];
+
+export const skillsList = [
+  "React",
+  "Nodejs",
+  "Express",
+  "MongoDB",
+  "Sass",
+  "Research",
+  "GitHub",
+  "Progressive Web Apps",
+];
+
+export const mediaLinks = [
+  {
+    url: "https://www.linkedin.com/in/ehiabhi-enimakpokpo-16436010a/",
+    component: LinkedIn,
+  },
+  {
+    url: "https://github.com/Ehiabhi",
+    component: GitHub,
+  },
+  {
+    url: "tel:+234-803-0599-773",
+    component: PhoneAndroid,
+  },
+  {
+    url: "https://twitter.com/fullstacKmaniac?s=09",
+    component: Twitter,
   },
 ];

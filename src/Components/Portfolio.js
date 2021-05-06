@@ -4,6 +4,7 @@ import { ProjectList } from "./ProjectResource";
 import TemporaryDrawer from "./Drawer";
 import HomeIcon from "@material-ui/icons/Home";
 import PersonIcon from "@material-ui/icons/Person";
+import InfoIcon from "@material-ui/icons/Info";
 
 export default class Portfolio extends React.Component {
   render() {
@@ -12,6 +13,7 @@ export default class Portfolio extends React.Component {
         <TemporaryDrawer
           name_path={[
             { name: "Home", path: "/", icon: <HomeIcon /> },
+            { name: "About", path: "/about", icon: <InfoIcon /> },
             { name: "Profile", path: "/profile", icon: <PersonIcon /> },
           ]}
         />
